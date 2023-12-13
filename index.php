@@ -1,12 +1,5 @@
 <?php
-if (isset($_POST['user-email'])) {
-    if (str_contains($_POST['user-email'], '.') && str_contains($_POST['user-email'], '@')) {
-        $user_email = $_POST['user-email'];
-        $validation = 'email valida';
-    } else {
-        $validation = 'email non valida';
-    }
-}
+include __DIR__ . './functions.php'
 ?>
 
 <!DOCTYPE html>
