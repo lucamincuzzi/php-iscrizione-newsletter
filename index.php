@@ -20,8 +20,12 @@ include __DIR__ . './functions.php'
             <input type="text" id="user-email" name="user-email">
             <button class="btn btn-primary" type="submit">Invia</button>
         </form>
-        <?php if(isset($validation)) { ?>
-            <p class="text-center mt-2"><?php echo $validation ?></p>
+        <?php if(isset($success) && $success) { ?>
+            <div class="alert alert-success mt-2" role="alert">Email valida!</div>
+        <?php } ?>
+
+        <?php if(isset($success) && !$success) { ?>
+            <div class="alert alert-danger mt-2" role="alert">Email non valida!</div>
         <?php } ?>
     </div>
 </body>
